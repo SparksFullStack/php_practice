@@ -7,7 +7,10 @@
         $password = $_POST['password'];
         $id = $_POST['id'];
 
-        $query = "UPDATE users SET username='$username', password='$password' WHERE id=$id";
+        $query = "
+                    UPDATE users SET username='$username', password='$password' 
+                    WHERE id=$id
+                ";
 
         $result = mysqli_query($connection, $query);
 
