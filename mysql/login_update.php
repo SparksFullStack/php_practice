@@ -45,18 +45,3 @@
     </div>
 </body>
 </html>
-
-<!-- $username = $_POST['username'];
-        $password = $_POST['password'];
-        $id = $_POST['id'];
-
-        $query = "
-                    UPDATE users SET username='$username', password='$password' 
-                    WHERE id=$id
-                ";
-
-        $result = mysqli_query($connection, $query);
-
-        if ($result){
-            echo "We did it";
-        } else echo "fuck"; -->
