@@ -2,11 +2,18 @@
     include "db.php";
     include "functions.php";
 
-    if (isset($_POST['update'])){
-        $newUsername = $_POST['username'];
-        $newPassword = $_POST['password'];
+    if (isset($_POST['submit'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $id = $_POST['id'];
 
-        echo "Your new username is " . $newUsername . " and your new password is " . $newPassword . "<br>";
+        $query = "UPDATE users SET username='$username', password='$password' WHERE id=$id";
+
+        $result = mysqli_query($connection, $query);
+
+        if ($result){
+            echo "We did it";
+        } else echo "fuck";
     }
 ?>
 
@@ -42,7 +49,7 @@
                     </select>
                 </div>
 
-                <input class="btn btn-primary" type="update" name="update" value="UPDATE">
+                <input class="btn btn-primary" type="submit" name="submit" value="UPDATE">
             </form>
         </div>
     </div>
