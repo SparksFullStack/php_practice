@@ -1,9 +1,9 @@
 <?php
+    include "db.php";
+
     if (isset($_POST["submit"])){
         $username = $_POST["username"];
         $password = $_POST["password"];
-
-        $connection = mysqli_connect('localhost', 'root', '', 'loginapp');
 
         if ($connection) echo "WE LIT";
         else die("we lite =/");
