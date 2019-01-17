@@ -5,6 +5,15 @@
         $username = $_POST["username"];
         $password = $_POST["password"];
 
+        $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);
+
+        $hash = "$2y$10$";
+        $salt = "thisisareallyreallylongstring";
+        $hash_and_salt = $hash . $salt;
+
+        $password = crypt($password, $hash_and_salt);
+
         if ($connection) echo "WE LIT";
         else die("we lite =/");
 
