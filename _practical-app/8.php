@@ -16,6 +16,13 @@
 	
 	
 	<?php  
+		$text = "i like turtles";
+		$hash = "$2y$10$";
+		$salt = "cheeseyballznstuff12345566890";
+		$hash_n_salt = $hash . $salt;
+		$text = crypt($text, $hash_n_salt);
+
+		echo $text;
 
 	/*  Step 1 -Make a variable with some text as value
 
