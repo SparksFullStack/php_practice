@@ -14,6 +14,23 @@
 	
 	<?php  
 
+	class Dog {
+		function __Construct($name, $age, $breed, $color, $owner){
+			$this->name = $name;
+			$this->age = $age;
+			$this->breed = $breed;
+			$this->color = $color;
+			$this->owner = $owner;
+		}
+
+		function IntroduceDog(){
+			echo "$this->name is $this->age years old. He is a $this->color $this->breed and his owner is $this->owner";
+		}
+	}
+
+	$Doobs = new Dog("MacGruber", "3", "Wiener Dog", "black and tan", "Charlie");
+	$Doobs->IntroduceDog();
+
 	/*  Step 1: Use the Make a class called Dog
 
 		Step 2: Set some properties for Dog, Example, eye colors, nose, or fur color
